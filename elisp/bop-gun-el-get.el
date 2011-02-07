@@ -1,5 +1,5 @@
 (setq el-get-sources
-      '(ack
+      '(ack ruby-mode
 	(:name smex
 	       :type git
 	       :url "https://github.com/nonsequitur/smex.git"
