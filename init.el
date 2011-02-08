@@ -7,4 +7,4 @@
 (require 'el-get)
 ;;(load "integrations")
 (load "bop-gun-el-get")
-;;(load "custom")
+(load "custom")
