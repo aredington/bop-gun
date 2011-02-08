@@ -9,4 +9,5 @@
 (load "bop-gun-el-get")
 (require 'auto-complete-config)
 (require 'color-theme-ir-black)
-(load "custom")
+(setq custom-file "~/.emacs.d/elisp/custom.el")
+(load custom-file 'noerror)
