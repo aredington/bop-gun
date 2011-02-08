@@ -6,4 +6,4 @@
 	       :after (smex-initialize))
 	))
 
-(el-get)
+(el-get 'sync)
