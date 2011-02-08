@@ -7,5 +7,6 @@
 (require 'el-get)
 (load "integrations")
 (load "bop-gun-el-get")
+(require 'auto-complete-config)
 (require 'color-theme-ir-black)
 (load "custom")
