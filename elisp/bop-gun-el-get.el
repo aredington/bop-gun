@@ -14,5 +14,8 @@
 	(:name color-theme-ir-black 
 	       :type git 
 	       :url "git://github.com/burke/color-theme-ir-black.git")
+	(:name textmade.el
+	       :type git
+	       :url "https://github.com/defunkt/textmate.el.git")
 	))
 (el-get 'sync)

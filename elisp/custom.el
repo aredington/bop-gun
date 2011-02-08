@@ -1,5 +1,5 @@
 (ido-mode)
-;;(textmate-mode)
+(textmate-mode)
 (smex-initialize)
 
 (global-set-key (kbd "M-x") 'smex)
