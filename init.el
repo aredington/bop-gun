@@ -8,6 +8,7 @@
 (load "integrations")
 (load "bop-gun-el-get")
 (require 'auto-complete-config)
+(require 'slime)
 (require 'color-theme-ir-black)
 (setq custom-file "~/.emacs.d/elisp/custom.el")
 (load custom-file 'noerror)

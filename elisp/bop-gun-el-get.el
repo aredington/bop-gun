@@ -1,5 +1,5 @@
 (setq el-get-sources
-      '(ack ruby-mode el-expectations clojure-mode color-theme haml-mode flymake-ruby
+      '(ack ruby-mode el-expectations clojure-mode color-theme haml-mode flymake-ruby slime
 	(:name smex
 	       :type git
 	       :url "https://github.com/nonsequitur/smex.git")
@@ -10,6 +10,8 @@
 	       :type git
 	       :url "https://github.com/aredington/rspec-mode.git")
 	(:name ruby-electric
+	       :type elpa)
+	(:name slime-repl
 	       :type elpa)
 	(:name paredit
 	       :after (lambda () (add-hook 'clojure-mode-hook 'lisp-enable-paredit-hook)))
