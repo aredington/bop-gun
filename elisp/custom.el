@@ -1,5 +1,6 @@
 ;; Set config options
 (setq save-abbrevs nil)
+(setq js-indent-level 2)
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
@@ -32,6 +33,7 @@
 ;; start up globally desirable minor modes
 (ido-mode)
 (textmate-mode)
+(highlight-symbol-mode)
 (smex-initialize)
 (ac-config-default)
 

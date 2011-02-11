@@ -1,5 +1,5 @@
 (setq el-get-sources
-      '(ack ruby-mode el-expectations clojure-mode color-theme haml-mode flymake-ruby slime
+      '(ack ruby-mode el-expectations clojure-mode color-theme haml-mode flymake-ruby slime highlight-symbol
 	(:name smex
 	       :type git
 	       :url "https://github.com/nonsequitur/smex.git")
