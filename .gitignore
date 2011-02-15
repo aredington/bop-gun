@@ -2,3 +2,4 @@ el-get/*
 !el-get/el-get
 elpa/*
 !elpa/package.el
+ac-comphist.dat

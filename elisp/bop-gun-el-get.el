@@ -3,6 +3,9 @@
 	(:name smex
 	       :type git
 	       :url "https://github.com/nonsequitur/smex.git")
+	(:name cucumber.el
+	       :type git
+	       :url "https://github.com/michaelklishin/cucumber.el.git")
 	(:name rvm.el
 	       :type git
 	       :url "https://github.com/senny/rvm.el.git")
