@@ -37,6 +37,7 @@
 (highlight-symbol-mode)
 (smex-initialize)
 (ac-config-default)
+(rvm-autodetect-ruby)
 
 ;; custom keybindings
 ;; SMEX:

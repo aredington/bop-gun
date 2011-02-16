@@ -10,5 +10,6 @@
 (require 'auto-complete-config)
 (require 'slime)
 (require 'color-theme-ir-black)
+(require 'rvm)
 (setq custom-file "~/.emacs.d/elisp/custom.el")
 (load custom-file 'noerror)
