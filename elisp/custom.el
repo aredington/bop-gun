@@ -3,6 +3,7 @@
 (setq js-indent-level 2)
 (setq tab-width 1)
 (setq c-basic-offset 1)
+(setq-default indent-tabs-mode nil)
 (setq inferior-lisp-program "java -cp /Users/alex/clojure-core/clojure/clojure.jar clojure.main")
 
 (custom-set-variables
