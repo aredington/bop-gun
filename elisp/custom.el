@@ -4,6 +4,7 @@
 (setq tab-width 1)
 (setq c-basic-offset 1)
 (setq-default indent-tabs-mode nil)
+(setq javascript-indent-level 2)
 (setq inferior-lisp-program "java -cp /Users/alex/clojure-core/clojure/clojure.jar clojure.main")
 (add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t)))
 
