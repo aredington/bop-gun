@@ -3,9 +3,8 @@
 	(:name smex
 	       :type git
 	       :url "https://github.com/nonsequitur/smex.git")
-	(:name javascript-mode
-	       :type git
-	       :url "https://github.com/emacsmirror/javascript-mode.git")
+	(:name javascript
+	       :type elpa)
 	(:name magit
 	       :type git
 	       :url "https://github.com/philjackson/magit.git")
