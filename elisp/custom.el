@@ -6,6 +6,7 @@
 (setq-default indent-tabs-mode nil)
 (setq javascript-indent-level 2)
 (setq inferior-lisp-program "java -cp /Users/alex/clojure-core/clojure/clojure.jar clojure.main")
+(setq auto-mode-alist (cons '("\\.js$" . javascript-mode) auto-mode-alist))
 (add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t)))
 
 (custom-set-variables
