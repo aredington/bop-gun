@@ -4,6 +4,7 @@
 (setq tab-width 1)
 (setq c-basic-offset 1)
 (setq inferior-lisp-program "java -cp /Users/alex/clojure-core/clojure/clojure.jar clojure.main")
+(add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t)))
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
@@ -48,6 +49,7 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+(global-set-key (kbd "M-/") 'hippie-expand)
 
 ;; Select the color theme
 (color-theme-ir-black)
