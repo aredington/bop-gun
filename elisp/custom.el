@@ -2,7 +2,7 @@
 (setq save-abbrevs nil)
 (setq js-indent-level 2)
 (setq tab-width 1)
-(setq c-basic-offset 1)
+(setq c-basic-offset 2)
 (setq-default indent-tabs-mode nil)
 (setq javascript-indent-level 2)
 (setq inferior-lisp-program "java -cp /Users/alex/clojure-core/clojure/clojure.jar clojure.main")
@@ -49,6 +49,8 @@
 
 ;; custom keybindings
 ;; SMEX:
+(global-set-key (kbd "A-o") 'ido-find-file)
+(global-set-key (kbd "A-b") 'ido-switch-buffer)
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;; This is your old M-x.

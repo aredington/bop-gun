@@ -3,3 +3,4 @@ el-get/*
 elpa/*
 !elpa/package.el
 ac-comphist.dat
+games/*
