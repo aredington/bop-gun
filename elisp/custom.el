@@ -46,6 +46,7 @@
 (smex-initialize)
 (ac-config-default)
 (rvm-autodetect-ruby)
+(autopair-global-mode)
 
 ;; custom keybindings
 ;; SMEX:
