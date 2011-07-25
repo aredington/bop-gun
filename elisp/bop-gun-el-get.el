@@ -25,7 +25,7 @@
                :after (lambda () (require 'rvm)))
 	(:name rspec-mode
 	       :type git
-	       :url "https://github.com/aredington/rspec-mode.git")
+	       :url "https://github.com/pezra/rspec-mode.git")
 	(:name ruby-electric
 	       :type git
                :url "https://github.com/aredington/ruby-electric.git")

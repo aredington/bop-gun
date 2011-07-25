@@ -6,7 +6,8 @@
 (setq-default indent-tabs-mode nil)
 (setq javascript-indent-level 2)
 (setq inferior-lisp-program "java -cp /Users/alex/clojure-core/clojure/clojure.jar clojure.main")
-(setq auto-mode-alist (cons '("\\.js$" . javascript-mode) auto-mode-alist))
+(add-to-list 'auto-mode-alist '("\\.js$" . javascript-mode))
+(add-to-list 'auto-mode-alist '("\\.cljs$" . clojure-mode))
 (setq make-backup-files nil)
 (add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t)))
 
@@ -25,6 +26,8 @@
  '(line-number-mode nil)
  '(ns-tool-bar-display-mode nil t)
  '(ns-tool-bar-size-mode nil t)
+ '(rspec-rake-command "/usr/bin/env rake")
+ '(rspec-use-rvm t)
  '(visual-line-mode nil t))
 
 ;; Kill excess UI
@@ -60,3 +63,9 @@
 
 ;; Select the color theme
 (color-theme-ir-black)
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ )
