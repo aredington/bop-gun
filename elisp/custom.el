@@ -28,6 +28,7 @@
  '(ns-tool-bar-size-mode nil t)
  '(rspec-rake-command "/usr/bin/env rake")
  '(rspec-use-rvm t)
+ '(show-trailing-whitespace t)
  '(visual-line-mode nil t))
 
 ;; Kill excess UI

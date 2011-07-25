@@ -4,3 +4,4 @@ elpa/*
 !elpa/package.el
 ac-comphist.dat
 games/*
+auto-save-list/*
