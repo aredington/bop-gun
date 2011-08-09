@@ -12,10 +12,10 @@
 (add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t)))
 
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(aquamacs-additional-fontsets nil t)
  '(aquamacs-customization-version-id 210 t)
  '(aquamacs-tool-bar-user-customization nil t)
@@ -35,8 +35,8 @@
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'tabbar-mode) (tabbar-mode t))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-(if (and (fboundp 'menu-bar-mode) 
-         (not window-system)) 
+(if (and (fboundp 'menu-bar-mode)
+         (not window-system))
     (menu-bar-mode t))
 ;; Don't go opening new frames
 (if (featurep 'aquamacs)
@@ -60,13 +60,14 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+(global-set-key (kbd "C-c n") 'cleanup-buffer)
 (global-set-key (kbd "M-/") 'hippie-expand)
 
 ;; Select the color theme
 (color-theme-ir-black)
 (custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  )
