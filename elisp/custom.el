@@ -44,13 +44,6 @@
 
 ;; start up globally desirable minor modes
 (ido-mode)
-(textmate-mode)
-(feature-mode)
-(highlight-symbol-mode)
-(smex-initialize)
-(ac-config-default)
-(rvm-autodetect-ruby)
-(autopair-global-mode)
 
 ;; custom keybindings
 ;; SMEX:
