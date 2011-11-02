@@ -50,7 +50,9 @@
 	(:name color-theme-ir-black
 	       :type git
 	       :url "git://github.com/burke/color-theme-ir-black.git"
-               :after (lambda () (require 'color-theme-ir-black)))
+               :after (lambda ()
+                        (require 'color-theme-ir-black)
+                        (color-theme-ir-black)))
 	(:name textmate
 	       :type git
 	       :url "https://github.com/defunkt/textmate.el.git"
