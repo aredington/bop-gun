@@ -36,17 +36,19 @@
                         (rvm-autodetect-ruby)))
 	(:name rspec-mode
 	       :type git
-	       :url "https://github.com/pezra/rspec-mode.git")
+	       :url "https://github.com/pezra/rspec-mode.git"
+        :after (lambda () (require 'rspec-mode)))
 	(:name ruby-electric
 	       :type git
-               :url "https://github.com/aredington/ruby-electric.git")
+        :url "https://github.com/aredington/ruby-electric.git"
+        :after (lambda () (require 'ruby-electric)))
 	(:name slime-repl
 	       :type elpa
-               :after (lambda () (require 'slime)))
+        :after (lambda () (require 'slime)))
 	(:name paredit
 	       :after (lambda ()
-                        (require 'paredit)
-                        (add-hook 'clojure-mode-hook 'lisp-enable-paredit-hook)))
+                 (require 'paredit)
+                 (add-hook 'clojure-mode-hook 'lisp-enable-paredit-hook)))
 	(:name color-theme-ir-black
 	       :type git
 	       :url "git://github.com/burke/color-theme-ir-black.git"
