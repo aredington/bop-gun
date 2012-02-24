@@ -40,3 +40,4 @@
 
 
 (put 'upcase-region 'disabled nil)
+(autopair-global-mode)
