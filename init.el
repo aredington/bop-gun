@@ -39,3 +39,4 @@
 (global-set-key (kbd "M-/") 'hippie-expand)
 
 
+(put 'upcase-region 'disabled nil)

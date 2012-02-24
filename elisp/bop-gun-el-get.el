@@ -21,7 +21,9 @@
                         (add-hook 'coffee-mode-hook 'coffee-custom)))
 	(:name magit
 	       :type git
-	       :url "https://github.com/philjackson/magit.git")
+	       :url "https://github.com/philjackson/magit.git"
+        :after (lambda ()
+                 (require 'magit)))
 	(:name cucumber.el
 	       :type git
 	       :url "https://github.com/michaelklishin/cucumber.el.git"
