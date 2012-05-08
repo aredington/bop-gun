@@ -5,3 +5,4 @@ elpa/*
 ac-comphist.dat
 games/*
 auto-save-list/*
+swank/*
