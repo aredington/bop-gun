@@ -1,5 +1,10 @@
 (setq el-get-sources
       '(ack ruby-mode el-expectations color-theme haml-mode flymake-ruby sass-mode yaml-mode autopair
+            (:name slime
+                   :type elpa
+                   :after (lambda ()
+                            (require 'slime)
+                            (require 'slime-repl)))
             (:name highlight-symbol
                    :after (lambda ()
                             (require 'highlight-symbol)
@@ -35,6 +40,18 @@
                    :after (lambda ()
                             (require 'feature-mode)
                             (feature-mode)))
+            (:name pir-mode
+                   :type http
+                   :url "https://raw.github.com/parrot/parrot/master/editor/pir-mode.el"
+                   :after (lambda ()
+                            (autoload 'pir-mode "pir-mode" nil t)
+                            (add-to-list 'auto-mode-alist '("\\.pir\\'" . pir-mode))))
+            (:name pasm
+                   :type http
+                   :url "https://raw.github.com/parrot/parrot/master/editor/pasm.el"
+                   :after (lambda ()
+                            (autoload 'pasm "pasm" nil t)
+                            (add-to-list 'auto-mode-alist '("\\.pasm\\'" . pasm))))
             (:name rvm
                    :type git
                    :url "https://github.com/senny/rvm.el.git"
