@@ -15,6 +15,12 @@
                    :url "https://github.com/technomancy/clojure-mode.git"
                    :after (lambda ()
                             (require 'clojure-mode)))
+            (:name kibit-mode
+                   :type git
+                   :url "https://github.com/aredington/kibit-mode.git"
+                   :after (lambda ()
+                            (require 'kibit-mode)
+                            (add-hook 'clojure-mode-hook 'kibit-mode)))
             (:name smex
                    :type git
                    :url "https://github.com/nonsequitur/smex.git"
