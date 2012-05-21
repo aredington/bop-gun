@@ -1,5 +1,5 @@
 (setq el-get-sources
-      '(ack ruby-mode el-expectations color-theme haml-mode flymake-ruby sass-mode yaml-mode autopair
+      '(ack ruby-mode el-expectations color-theme haml-mode flymake-ruby sass-mode yaml-mode autopair markdown-mode
             (:name highlight-symbol
                    :after (lambda ()
                             (require 'highlight-symbol)

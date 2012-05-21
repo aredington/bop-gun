@@ -15,7 +15,11 @@
 ;; Set config options
 (add-to-list 'auto-mode-alist '("\\.js$" . javascript-mode))
 (add-to-list 'auto-mode-alist '("\\.cljs$" . clojure-mode))
+(add-to-list 'auto-mode-alist '("\\.dtm$" . clojure-mode))
 (add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t)))
+(add-hook 'clojure-mode-hook (lambda ()
+                               (local-set-key (kbd "C-c )") 'paredit-forward-barf-sexp)
+                               (local-set-key (kbd "C-c (") 'paredit-forward-slurp-sexp)))
 
 ;; Kill excess UI
 (if (fboundp 'tabbar-mode) (tabbar-mode t))
@@ -38,6 +42,6 @@
 (global-set-key (kbd "C-c n") 'cleanup-buffer)
 (global-set-key (kbd "M-/") 'hippie-expand)
 
-
 (put 'upcase-region 'disabled nil)
-(autopair-global-mode)
+;; Doesn't play nice with swank, paredit covers this anyway
+;; (autopair-global-mode)

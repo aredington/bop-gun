@@ -6,7 +6,6 @@
  '(aquamacs-additional-fontsets nil t)
  '(aquamacs-customization-version-id 210 t)
  '(aquamacs-tool-bar-user-customization nil t)
- '(autopair-global-mode t)
  '(c-basic-offset 2)
  '(confirm-kill-emacs nil)
  '(debug-on-error t)
