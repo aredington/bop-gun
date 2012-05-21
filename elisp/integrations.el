@@ -33,3 +33,6 @@
 (setq
  uniquify-buffer-name-style 'post-forward
  uniquify-separator ":")
+
+
+(global-set-key (kbd "C-x m") 'magit-status)
