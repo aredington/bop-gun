@@ -1,5 +1,9 @@
 (setq el-get-sources
-      '(ack ruby-mode el-expectations color-theme haml-mode flymake-ruby sass-mode yaml-mode autopair markdown-mode auto-complete
+      '(ack ruby-mode el-expectations color-theme haml-mode flymake-ruby sass-mode yaml-mode autopair markdown-mode
+            (:name auto-complete
+                   :after (progn
+                            (require 'auto-complete)
+                            (auto-complete)))
             (:name slime
                    :type elpa
                    :after (progn
