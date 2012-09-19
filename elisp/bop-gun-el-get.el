@@ -91,5 +91,6 @@
                    :url "https://github.com/defunkt/textmate.el.git"
                    :after (progn
                             (require 'textmate)
-                            (textmate-mode)))))
+                            (textmate-mode)
+                            (define-key *textmate-mode-map* [(control c)(control k)] nil)))))
 (el-get 'sync)
