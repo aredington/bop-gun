@@ -4,7 +4,12 @@
   (package-initialize))
 (add-to-list 'load-path "~/bop-gun/el-get/el-get/")
 (add-to-list 'load-path "~/bop-gun/elisp/")
-(require 'el-get)
+(unless (require 'el-get nil 'noerror)
+  (with-current-buffer
+      (url-retrieve-synchronously
+       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
+    (goto-char (point-max))
+    (eval-print-last-sexp)))
 
 (load "bop-gun-el-get")
 (load "integrations")
@@ -13,7 +18,7 @@
 (load custom-file)
 
 ;; Set config options
-(add-to-list 'auto-mode-alist '("\\.js$" . javascript-mode))
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.cljs$" . clojure-mode))
 (add-to-list 'auto-mode-alist '("\\.dtm$" . clojure-mode))
 (add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t)))
@@ -33,7 +38,8 @@
 
 (menu-bar-mode -1)
 (show-paren-mode t)
-
+(require 'auto-complete)
+(global-auto-complete-mode)
 ;; custom keybindings
 ;; SMEX:
 (global-set-key (kbd "A-o") 'ido-find-file)
