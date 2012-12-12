@@ -31,6 +31,9 @@
 (if (featurep 'aquamacs)
     (one-buffer-one-frame-mode 0))
 
+(menu-bar-mode -1)
+(show-paren-mode t)
+
 ;; custom keybindings
 ;; SMEX:
 (global-set-key (kbd "A-o") 'ido-find-file)
