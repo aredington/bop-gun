@@ -26,7 +26,7 @@
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (if (and (fboundp 'menu-bar-mode)
          (not window-system))
-    (menu-bar-mode t))
+    (menu-bar-mode nil))
 ;; Don't go opening new frames
 (if (featurep 'aquamacs)
     (one-buffer-one-frame-mode 0))
