@@ -39,7 +39,7 @@
 (menu-bar-mode -1)
 (show-paren-mode t)
 (require 'auto-complete)
-(global-auto-complete-mode)
+(global-auto-complete-mode t)
 ;; custom keybindings
 ;; SMEX:
 (global-set-key (kbd "A-o") 'ido-find-file)
