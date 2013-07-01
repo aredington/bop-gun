@@ -32,8 +32,9 @@
                :url "https://github.com/aredington/kibit-mode.git"
                :after (progn
                         (require 'kibit-mode)
-                        (add-hook 'clojure-mode-hook 'kibit-mode)
-                        (add-hook 'clojure-mode-hook 'flymake-mode-on)))
+                        ;(add-hook 'clojure-mode-hook 'kibit-mode)
+                        ;(add-hook 'clojure-mode-hook 'flymake-mode-on)
+                        ))
         (:name smex
                :type git
                :url "https://github.com/nonsequitur/smex.git"
@@ -96,7 +97,7 @@
                         (define-key *textmate-mode-map* [(control c)(control k)] nil)))))
 (setq bopgun-packages
       (append
-       '(ack ruby-mode el-expectations color-theme haml-mode flymake-ruby sass-mode yaml-mode autopair markdown-mode js2-mode auto-complete)
-       (mapcar 'el-get-source-name el-get-sources)))
+       (mapcar 'el-get-source-name el-get-sources)
+       '(ack ruby-mode el-expectations color-theme haml-mode flymake-ruby sass-mode yaml-mode autopair markdown-mode js2-mode auto-complete nrepl)))
 
 (el-get 'sync bopgun-packages)
