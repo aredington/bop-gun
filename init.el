@@ -14,6 +14,10 @@
 (load "bop-gun-el-get")
 (load "integrations")
 
+(require 'color-theme)
+(require 'color-theme-ir-black)
+(color-theme-ir-black)
+
 (setq custom-file "~/.emacs.d/elisp/custom.el")
 (load custom-file)
 

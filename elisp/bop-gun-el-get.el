@@ -47,9 +47,13 @@
                :after (progn
                         (require 'coffee-mode)
                         (add-hook 'coffee-mode-hook 'coffee-custom)))
+        (:name cl-lib
+               :type http
+               :url "https://raw.github.com/emacsmirror/cl-lib/master/cl-lib.el"
+               :after (progn (require 'cl-lib)))
         (:name magit
                :type git
-               :url "https://github.com/philjackson/magit.git"
+               :url "https://github.com/magit/magit.git"
                :after (progn
                         (require 'magit)))
         (:name pir-mode
@@ -85,9 +89,8 @@
         (:name color-theme-ir-black
                :type git
                :url "git://github.com/burke/color-theme-ir-black.git"
-               :after (progn
-                        (require 'color-theme-ir-black)
-                        (color-theme-ir-black)))
+               :after (progn nil))
+
         (:name textmate
                :type git
                :url "https://github.com/defunkt/textmate.el.git"
@@ -98,6 +101,8 @@
 (setq bopgun-packages
       (append
        (mapcar 'el-get-source-name el-get-sources)
-       '(ack ruby-mode el-expectations color-theme haml-mode flymake-ruby sass-mode yaml-mode autopair markdown-mode js2-mode auto-complete nrepl)))
+       '(ack ruby-mode el-expectations
+             color-theme
+             haml-mode flymake-ruby sass-mode yaml-mode autopair markdown-mode js2-mode auto-complete nrepl)))
 
 (el-get 'sync bopgun-packages)
