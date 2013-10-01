@@ -1,7 +1,8 @@
-(when
-    (load
-     (expand-file-name "~/bop-gun/elpa/package.el"))
-  (package-initialize))
+(require 'package)
+(add-to-list 'package-archives
+	     '("marmalade" .
+	       "http://marmalade-repo.org/packages"))
+(package-initialize)
 (add-to-list 'load-path "~/bop-gun/el-get/el-get/")
 (add-to-list 'load-path "~/bop-gun/elisp/")
 (unless (require 'el-get nil 'noerror)

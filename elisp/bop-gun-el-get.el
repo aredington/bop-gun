@@ -1,5 +1,27 @@
 (setq el-get-sources
-      '((:name popup-el
+      '((:name dash
+	       :type git
+	       :url "https://github.com/magnars/dash.el.git"
+	       :after (progn
+			(require 'dash)))
+	(:name s
+	       :type git
+	       :url "https://github.com/magnars/s.el.git"
+	       :after (progn
+			(require 's)))
+	(:name pkg-info
+	       :type git
+	       :url "https://github.com/lunaryorn/pkg-info.el.git"
+	       :after (progn 
+			(require 's)
+			(require 'dash)
+			(require 'pkg-info)))
+	(:name git-commit-mode
+	       :type git
+	       :url "https://github.com/magit/git-modes.git"
+	       :after (progn 
+			(require 'git-commit-mode)))
+	(:name popup-el
 	       :type git
 	       :url "https://github.com/auto-complete/popup-el.git"
 	       :after (progn
