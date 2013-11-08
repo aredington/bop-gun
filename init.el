@@ -1,16 +1,25 @@
-(require 'package)
-(add-to-list 'package-archives
-	     '("marmalade" .
-	       "http://marmalade-repo.org/packages"))
-(package-initialize)
-(add-to-list 'load-path "~/bop-gun/el-get/el-get/")
+;; Bootstrap el-get
+(add-to-list 'load-path "~/bop-gun/el-get/el-get")
 (add-to-list 'load-path "~/bop-gun/elisp/")
+
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
       (url-retrieve-synchronously
-       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
+       "http://raw.github.com/dimitri/el-get/master/el-get-install.el")
     (goto-char (point-max))
     (eval-print-last-sexp)))
+
+(add-to-list 'el-get-recipe-path "~/bop-gun/el-get-user/recipes")
+
+
+;; bootstrap package and marmalade
+(el-get 'sync '(package))
+
+(require 'package)
+(add-to-list 'package-archives 
+    '("marmalade" .
+      "http://marmalade-repo.org/packages/"))
+(package-initialize)
 
 (load "bop-gun-el-get")
 (load "integrations")
@@ -28,10 +37,10 @@
 (add-to-list 'auto-mode-alist '("\\.dtm$" . clojure-mode))
 (add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t)))
 (add-hook 'clojure-mode-hook (lambda ()
-                               (local-set-key (kbd "C-c )") 'paredit-forward-barf-sexp)
-                               (local-set-key (kbd "C-c (") 'paredit-forward-slurp-sexp)))
+                                (local-set-key (kbd "C-c )") 'paredit-forward-barf-sexp)
+                                (local-set-key (kbd "C-c (") 'paredit-forward-slurp-sexp)))
 
-;; Kill excess UI
+;; ;; Kill excess UI
 (if (fboundp 'tabbar-mode) (tabbar-mode t))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (if (and (fboundp 'menu-bar-mode)

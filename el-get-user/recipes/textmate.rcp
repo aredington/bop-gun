@@ -1,0 +1,7 @@
+(:name textmate
+       :type git
+       :url "https://github.com/defunkt/textmate.el.git"
+       :after (progn
+		(require 'textmate)
+		(textmate-mode)
+		(define-key *textmate-mode-map* [(control c)(control k)] nil)))

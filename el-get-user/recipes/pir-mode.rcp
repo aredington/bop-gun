@@ -1,0 +1,6 @@
+(:name pir-mode
+       :type http
+       :url "https://raw.github.com/parrot/parrot/master/editor/pir-mode.el"
+       :after (progn
+		(autoload 'pir-mode "pir-mode" nil t)
+		(add-to-list 'auto-mode-alist '("\\.pir\\'" . pir-mode))))

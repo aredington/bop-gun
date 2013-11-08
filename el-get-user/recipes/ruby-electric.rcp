@@ -1,0 +1,4 @@
+(:name ruby-electric
+       :type git
+       :url "https://github.com/aredington/ruby-electric.git"
+       :after (progn (require 'ruby-electric)))

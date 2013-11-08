@@ -1,0 +1,6 @@
+(:name pasm
+       :type http
+       :url "https://raw.github.com/parrot/parrot/master/editor/pasm.el"
+       :after (progn
+		(autoload 'pasm "pasm" nil t)
+		(add-to-list 'auto-mode-alist '("\\.pasm\\'" . pasm))))
