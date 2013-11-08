@@ -11,14 +11,13 @@
 
 (add-to-list 'el-get-recipe-path "~/bop-gun/el-get-user/recipes")
 
-
 ;; bootstrap package and marmalade
 (el-get 'sync '(package))
 
 (require 'package)
 (add-to-list 'package-archives 
-    '("marmalade" .
-      "http://marmalade-repo.org/packages/"))
+             '("marmalade" .
+               "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
 (load "bop-gun-el-get")
@@ -35,10 +34,13 @@
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.cljs$" . clojure-mode))
 (add-to-list 'auto-mode-alist '("\\.dtm$" . clojure-mode))
+(add-hook 'clojure-mode-hook 'highlight-symbol-mode)
+(add-hook 'ruby-mode-hook 'highlight-symbol-mode)
 (add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t)))
 (add-hook 'clojure-mode-hook (lambda ()
-                                (local-set-key (kbd "C-c )") 'paredit-forward-barf-sexp)
-                                (local-set-key (kbd "C-c (") 'paredit-forward-slurp-sexp)))
+                               (local-set-key (kbd "C-c )") 'paredit-forward-barf-sexp)
+                               (local-set-key (kbd "C-c (") 'paredit-forward-slurp-sexp)))
+(add-hook 'emacs-lisp-mode-hook 'paredit-mode)
 
 ;; ;; Kill excess UI
 (if (fboundp 'tabbar-mode) (tabbar-mode t))
