@@ -5,6 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(aquamacs-additional-fontsets nil t)
  '(aquamacs-customization-version-id 210 t)
+ '(aquamacs-scratch-file nil)
  '(aquamacs-tool-bar-user-customization nil t)
  '(c-basic-offset 2)
  '(confirm-kill-emacs nil)
@@ -25,6 +26,7 @@
  '(rspec-rake-command "/usr/bin/env rake")
  '(rspec-use-rvm t)
  '(save-abbrevs nil)
+ '(show-scratch-buffer-on-startup nil)
  '(show-trailing-whitespace t)
  '(tab-width 1)
  '(textmate-mode t)

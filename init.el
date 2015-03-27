@@ -15,7 +15,7 @@
 (el-get 'sync '(package))
 
 (require 'package)
-(add-to-list 'package-archives 
+(add-to-list 'package-archives
              '("marmalade" .
                "http://marmalade-repo.org/packages/"))
 (package-initialize)
@@ -34,10 +34,11 @@
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.cljs$" . clojure-mode))
 (add-to-list 'auto-mode-alist '("\\.dtm$" . clojure-mode))
-(add-hook 'clojure-mode-hook 'highlight-symbol-mode)
-(add-hook 'ruby-mode-hook 'highlight-symbol-mode)
-(add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t)))
+(add-hook 'ruby-mode-hook (lambda ()
+                            (highlight-symbol-mode)))
 (add-hook 'clojure-mode-hook (lambda ()
+                               (highlight-symbol-mode t)
+                               (paredit-mode t)
                                (local-set-key (kbd "C-c )") 'paredit-forward-barf-sexp)
                                (local-set-key (kbd "C-c (") 'paredit-forward-slurp-sexp)))
 (add-hook 'emacs-lisp-mode-hook 'paredit-mode)
@@ -70,3 +71,4 @@
 (put 'upcase-region 'disabled nil)
 ;; Doesn't play nice with swank, paredit covers this anyway
 ;; (autopair-global-mode)
+(put 'downcase-region 'disabled nil)
