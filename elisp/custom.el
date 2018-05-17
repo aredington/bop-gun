@@ -40,7 +40,7 @@
  '(menu-bar-mode nil)
  '(ns-tool-bar-display-mode (quote both) t)
  '(ns-tool-bar-size-mode nil t)
- '(package-selected-packages (quote (pinentry queue)))
+ '(package-selected-packages (quote (vlf pinentry queue)))
  '(rspec-rake-command "/usr/bin/env rake")
  '(rspec-use-rvm t)
  '(save-abbrevs nil)
