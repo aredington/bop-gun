@@ -1,6 +1,7 @@
 ;; Bootstrap el-get
 (add-to-list 'load-path "~/bop-gun/el-get/el-get")
 (add-to-list 'load-path "~/bop-gun/elisp/")
+(add-to-list 'load-path "~/Library/Preferences/Aquamacs Emacs/Packages/el-get/el-get")
 
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
@@ -23,6 +24,10 @@
 (load "bop-gun-el-get")
 (load "integrations")
 
+;; exec path from shell in emacs
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
+
 (require 'color-theme)
 (require 'color-theme-ir-black)
 (color-theme-ir-black)
@@ -32,7 +37,6 @@
 
 ;; Set config options
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
-(add-to-list 'auto-mode-alist '("\\.cljs$" . clojure-mode))
 (add-to-list 'auto-mode-alist '("\\.dtm$" . clojure-mode))
 (add-hook 'ruby-mode-hook (lambda () (highlight-symbol-mode t)
 			    (ruby-electric-mode t)))

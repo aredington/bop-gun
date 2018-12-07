@@ -8,6 +8,9 @@
  '(aquamacs-scratch-file nil)
  '(aquamacs-tool-bar-user-customization nil t)
  '(c-basic-offset 2)
+ '(cider-inject-dependencies-at-jack-in nil)
+ '(cider-jack-in-auto-inject-clojure nil)
+ '(cider-lein-parameters "repl :headless :host ::")
  '(confirm-kill-emacs nil)
  '(debug-on-error t)
  '(default-frame-alist
@@ -24,8 +27,7 @@
       (border-color . "#000000")
       (cursor-color . "#FFA560")
       (foreground-color . "#F6F3E8")
-      (mouse-color . "sienna1")
-      (vertical-scroll-bars))))
+      (mouse-color . "sienna1"))))
  '(global-auto-complete-mode t)
  '(global-linum-mode t)
  '(ido-mode (quote both) nil (ido))
@@ -34,17 +36,19 @@
  '(initial-buffer-choice t)
  '(javascript-indent-level 4)
  '(js-indent-level 4)
+ '(json-reformat:indent-width 2)
  '(line-number-mode nil)
  '(magit-commit-arguments nil)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
  '(ns-tool-bar-display-mode (quote both) t)
  '(ns-tool-bar-size-mode nil t)
- '(package-selected-packages (quote (pinentry queue)))
+ '(package-selected-packages
+   (quote
+    (clojure-mode cider json-reformat exec-path-from-shell sayid pinentry queue)))
  '(rspec-rake-command "/usr/bin/env rake")
  '(rspec-use-rvm t)
  '(save-abbrevs nil)
- '(show-paren-mode nil)
  '(show-scratch-buffer-on-startup nil)
  '(show-trailing-whitespace t)
  '(tab-width 1)
@@ -60,17 +64,3 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "#000000" :foreground "#F6F3E8" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "nil" :family "Monaco"))))
  '(Custom-mode-default ((t (:inherit autoface-default :height 120 :family "Monaco"))) t))
-
-;; Check custom-file compatibility
-(when (and (boundp 'aquamacs-version-id)
-	   (< (floor (/ aquamacs-version-id 10))
-	   (floor (/ aquamacs-customization-version-id 10))))
-  (defadvice frame-notice-user-settings (before show-version-warning activate)
-    (defvar aquamacs-backup-custom-file nil "Backup of `custom-file', if any.")
-    (setq aquamacs-backup-custom-file "~/.emacs.d/elisp/customizations.2.1.el")
-    (let ((msg "Aquamacs options were saved by a more recent program version.
-Errors may occur.  Save Options to overwrite the customization file. The original, older customization file was backed up to ~/.emacs.d/elisp/customizations.2.1.el."))
-      (if window-system
-	  (x-popup-dialog t (list msg '("OK" . nil) 'no-cancel) "Warning")
-	(message msg)))))
-;; End compatibility check
