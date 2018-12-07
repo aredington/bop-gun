@@ -1,6 +1,3 @@
 (:name sayid
        :description "sayid nREPL middleware client"
-       :type elpa
-       :pkgname "sayid"
-       :post-init (eval-after-load 'clojure-mode
-                    '(sayid-setup-package)))
+       :type elpa)

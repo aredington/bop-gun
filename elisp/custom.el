@@ -43,9 +43,7 @@
  '(menu-bar-mode nil)
  '(ns-tool-bar-display-mode (quote both) t)
  '(ns-tool-bar-size-mode nil t)
- '(package-selected-packages
-   (quote
-    (clojure-mode cider json-reformat exec-path-from-shell sayid pinentry queue)))
+ '(package-selected-packages (quote (exec-path-from-shell vlf pinentry queue)))
  '(rspec-rake-command "/usr/bin/env rake")
  '(rspec-use-rvm t)
  '(save-abbrevs nil)

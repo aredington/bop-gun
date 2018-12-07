@@ -38,8 +38,7 @@
 ;; Set config options
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.dtm$" . clojure-mode))
-(add-hook 'ruby-mode-hook (lambda () (highlight-symbol-mode t)
-			    (ruby-electric-mode t)))
+(add-hook 'ruby-mode-hook (lambda () (highlight-symbol-mode t)))
 (add-hook 'sass-mode-hook 'autopair-mode)
 (add-hook 'clojure-mode-hook (lambda ()
 			       (highlight-symbol-mode t)
