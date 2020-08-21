@@ -1,0 +1,3 @@
+(:name parsedn
+       :description "Parsedn lib"
+       :type elpa)
