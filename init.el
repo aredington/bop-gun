@@ -12,6 +12,8 @@
 
 (add-to-list 'el-get-recipe-path "~/bop-gun/el-get-user/recipes")
 
+(load "bop-gun-el-get")
+
 ;; bootstrap package and marmalade
 (el-get 'sync '(package))
 
@@ -19,9 +21,9 @@
 (add-to-list 'package-archives
              '("marmalade" .
                "http://marmalade-repo.org/packages/"))
+
 (package-initialize)
 
-(load "bop-gun-el-get")
 (load "integrations")
 
 ;; exec path from shell in emacs
@@ -41,10 +43,13 @@
 (add-hook 'ruby-mode-hook (lambda () (highlight-symbol-mode t)))
 (add-hook 'sass-mode-hook 'autopair-mode)
 (add-hook 'clojure-mode-hook (lambda ()
-			       (highlight-symbol-mode t)
+			                            (highlight-symbol-mode t)
                                (paredit-mode t)
                                (local-set-key (kbd "C-c )") 'paredit-forward-barf-sexp)
-                               (local-set-key (kbd "C-c (") 'paredit-forward-slurp-sexp)))
+                               (local-set-key (kbd "C-c (") 'paredit-forward-slurp-sexp)
+                               (put-clojure-indent 'prop/for-all 1)
+                               ))
+(eval-after-load 'clojure-mode '(sayid-setup-package))
 (add-hook 'emacs-lisp-mode-hook 'paredit-mode)
 
 ;; ;; Kill excess UI
@@ -76,3 +81,5 @@
 ;; Doesn't play nice with swank, paredit covers this anyway
 ;; (autopair-global-mode)
 (put 'downcase-region 'disabled nil)
+
+(load "nu-antics")

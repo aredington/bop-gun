@@ -11,11 +11,14 @@
  '(cider-inject-dependencies-at-jack-in nil)
  '(cider-jack-in-auto-inject-clojure nil)
  '(cider-lein-parameters "repl :headless :host ::")
+ '(cider-print-fn 'pprint)
+ '(cider-test-defining-forms '("deftest" "defspec" "defflow"))
+ '(clojure-align-forms-automatically t)
+ '(clojure-align-reader-conditionals t)
  '(confirm-kill-emacs nil)
  '(debug-on-error t)
  '(default-frame-alist
-    (quote
-     ((menu-bar-lines . 0)
+    '((menu-bar-lines . 0)
       (tool-bar-lines . 0)
       (fringe)
       (right-fringe)
@@ -27,10 +30,10 @@
       (border-color . "#000000")
       (cursor-color . "#FFA560")
       (foreground-color . "#F6F3E8")
-      (mouse-color . "sienna1"))))
+      (mouse-color . "sienna1")))
  '(global-auto-complete-mode t)
  '(global-linum-mode t)
- '(ido-mode (quote both) nil (ido))
+ '(ido-mode 'both nil (ido))
  '(indent-tabs-mode nil)
  '(inferior-lisp-program "lein repl")
  '(initial-buffer-choice t)
@@ -41,9 +44,10 @@
  '(magit-commit-arguments nil)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
- '(ns-tool-bar-display-mode (quote both) t)
+ '(ns-tool-bar-display-mode 'both t)
  '(ns-tool-bar-size-mode nil t)
- '(package-selected-packages (quote (exec-path-from-shell vlf pinentry queue)))
+ '(package-selected-packages
+   '(cider with-editor spinner dart-mode so-long magit sayid exec-path-from-shell vlf pinentry queue))
  '(rspec-rake-command "/usr/bin/env rake")
  '(rspec-use-rvm t)
  '(save-abbrevs nil)
@@ -52,7 +56,8 @@
  '(tab-width 1)
  '(textmate-mode t)
  '(tool-bar-mode nil)
- '(visual-line-mode nil t))
+ '(visual-line-mode nil t)
+ '(warning-suppress-log-types '((el-get))))
 
 ;; Select the color theme
 (custom-set-faces
